@@ -3,10 +3,15 @@ import { Parallax } from "react-parallax";
 import Woman from "./images/woman.jpg";
 import City from "./images/city.jpg";
 import Fly from "./images/fly.jpg";
+import ImageSlider from "./components/ImageSlider";
+import { SliderData } from "./components/SliderData";
 
 function App() {
   return (
     <div className="App">
+      <div className="content">
+       <ImageSlider slides={SliderData} />;
+      </div>
       <Parallax strength={300} bgImage={Woman}>
         <div className="content">
           <div className="text-content">Normal Parallax</div>
@@ -56,7 +61,7 @@ function App() {
         </div>
       </Parallax>
 
-      <div className="content"></div>
+      
     </div>
   );
 }
